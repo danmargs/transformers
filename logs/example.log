@@ -1,0 +1,699 @@
+[INFO] 2020-09-24 15:30:37 > Run name : d_model=128-layers_count=6-heads_count=4-pe=False-optimizer=Noam-2020_09_24_15_30_37
+[INFO] 2020-09-24 15:30:37 > {'config': None, 'data_dir': 'data/example/processed', 'save_config': 'checkpoints/example_config.json', 'save_checkpoint': 'checkpoints/example_model.pth', 'save_log': 'logs/example.log', 'device': 'cpu', 'dataset_limit': None, 'print_every': 1, 'save_every': 1, 'vocabulary_size': None, 'positional_encoding': False, 'd_model': 128, 'layers_count': 6, 'heads_count': 4, 'd_ff': 128, 'dropout_prob': 0.2, 'label_smoothing': 0.1, 'optimizer': 'Noam', 'lr': 0.001, 'clip_grads': False, 'batch_size': 64, 'epochs': 100}
+[INFO] 2020-09-24 15:30:37 > Constructing dictionaries...
+[INFO] 2020-09-24 15:30:37 > Source dictionary vocabulary : 482 tokens
+[INFO] 2020-09-24 15:30:37 > Target dictionary vocabulary : 76 tokens
+[INFO] 2020-09-24 15:30:37 > Building model...
+[INFO] 2020-09-24 15:30:37 > Transformer(
+  (encoder): TransformerEncoder(
+    (embedding): Embedding(482, 128)
+    (encoder_layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (embedding): Embedding(76, 128)
+    (decoder_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+      (1): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+      (2): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+      (3): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+      (4): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+      (5): TransformerDecoderLayer(
+        (self_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (memory_attention_layer): Sublayer(
+          (sublayer): MultiHeadAttention(
+            (query_projection): Linear(in_features=128, out_features=128, bias=True)
+            (key_projection): Linear(in_features=128, out_features=128, bias=True)
+            (value_projection): Linear(in_features=128, out_features=128, bias=True)
+            (final_projection): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.2, inplace=False)
+            (softmax): Softmax(dim=3)
+          )
+          (layer_normalization): LayerNormalization()
+        )
+        (pointwise_feedforward_layer): Sublayer(
+          (sublayer): PointwiseFeedForwardNetwork(
+            (feed_forward): Sequential(
+              (0): Linear(in_features=128, out_features=128, bias=True)
+              (1): Dropout(p=0.2, inplace=False)
+              (2): ReLU()
+              (3): Linear(in_features=128, out_features=128, bias=True)
+              (4): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (layer_normalization): LayerNormalization()
+        )
+      )
+    )
+    (generator): Linear(in_features=128, out_features=76, bias=True)
+  )
+)
+[INFO] 2020-09-24 15:30:37 > Encoder : 659200 parameters
+[INFO] 2020-09-24 15:30:37 > Decoder : 1005132 parameters
+[INFO] 2020-09-24 15:30:37 > Total : 1664332 parameters
+[INFO] 2020-09-24 15:30:37 > Loading datasets...
+[INFO] 2020-09-24 15:30:37 > Start training...
+[INFO] 2020-09-24 15:30:38 > Epoch:   0 Progress: 0.0% Elapsed: 0:00:00 Examples/second: 8e+02 Train Loss: inf Val Loss: inf Train Metrics: [inf] Val Metrics: [inf] Learning rate: 6.988e-07 
+[INFO] 2020-09-24 15:30:38 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:30:38 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:31:11 > Epoch:   1 Progress: 1.0% Elapsed: 0:00:33 Examples/second: 2e+02 Train Loss: 70.0881 Val Loss: 12.6599 Train Metrics: [2.7470326199355156e+30, 0.0628] Val Metrics: [314875.1487, 0.9165] Learning rate: 9.783e-06 
+[INFO] 2020-09-24 15:31:11 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:31:11 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:31:42 > Epoch:   2 Progress: 2.0% Elapsed: 0:01:05 Examples/second: 2e+02 Train Loss: 62.4079 Val Loss: 10.6571 Train Metrics: [1.2688558791622398e+27, 0.0628] Val Metrics: [42492.9599, 0.9165] Learning rate: 1.887e-05 
+[INFO] 2020-09-24 15:31:42 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:31:42 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:32:14 > Epoch:   3 Progress: 3.0% Elapsed: 0:01:37 Examples/second: 2e+02 Train Loss: 46.3241 Val Loss: 6.75804 Train Metrics: [1.3131101301906525e+20, 0.0632] Val Metrics: [860.9547, 0.9165] Learning rate: 2.795e-05 
+[INFO] 2020-09-24 15:32:14 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:32:14 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:32:46 > Epoch:   4 Progress: 4.0% Elapsed: 0:02:09 Examples/second: 2e+02 Train Loss: 29.1748 Val Loss: 6.07734 Train Metrics: [4682245288062.2, 0.0485] Val Metrics: [435.8683, 0.0749] Learning rate: 3.703e-05 
+[INFO] 2020-09-24 15:32:46 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:32:46 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:33:18 > Epoch:   5 Progress: 5.0% Elapsed: 0:02:40 Examples/second: 2e+02 Train Loss: 18.6742 Val Loss: 12.521 Train Metrics: [128858575.5696, 0.0384] Val Metrics: [274020.5942, 0.0385] Learning rate: 4.612e-05 
+[INFO] 2020-09-24 15:33:18 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:33:18 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:33:49 > Epoch:   6 Progress: 6.0% Elapsed: 0:03:12 Examples/second: 2e+02 Train Loss: 12.9682 Val Loss: 12.6177 Train Metrics: [428553.1535, 0.057] Val Metrics: [301851.1928, 0.0039] Learning rate: 5.52e-05 
+[INFO] 2020-09-24 15:33:49 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:33:49 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:34:21 > Epoch:   7 Progress: 7.0% Elapsed: 0:03:44 Examples/second: 2e+02 Train Loss: 10.1309 Val Loss: 11.9917 Train Metrics: [25106.0825, 0.0663] Val Metrics: [161401.859, 0.0207] Learning rate: 6.429e-05 
+[INFO] 2020-09-24 15:34:21 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:34:21 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:34:53 > Epoch:   8 Progress: 8.0% Elapsed: 0:04:15 Examples/second: 2e+02 Train Loss: 8.5348 Val Loss: 10.2002 Train Metrics: [5088.7957, 0.0668] Val Metrics: [26908.5214, 0.0109] Learning rate: 7.337e-05 
+[INFO] 2020-09-24 15:34:53 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:34:53 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:35:24 > Epoch:   9 Progress: 9.0% Elapsed: 0:04:47 Examples/second: 2e+02 Train Loss: 7.33612 Val Loss: 8.09692 Train Metrics: [1534.7475, 0.061] Val Metrics: [3284.3445, 0.0391] Learning rate: 8.246e-05 
+[INFO] 2020-09-24 15:35:24 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:35:24 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:35:56 > Epoch:  10 Progress: 10.0% Elapsed: 0:05:19 Examples/second: 2e+02 Train Loss: 6.41599 Val Loss: 6.92747 Train Metrics: [611.5439, 0.0687] Val Metrics: [1019.9148, 0.0372] Learning rate: 9.154e-05 
+[INFO] 2020-09-24 15:35:56 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:35:56 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:36:28 > Epoch:  11 Progress: 11.0% Elapsed: 0:05:51 Examples/second: 2e+02 Train Loss: 5.67089 Val Loss: 5.52607 Train Metrics: [290.2939, 0.0676] Val Metrics: [251.1561, 0.0026] Learning rate: 0.0001006 
+[INFO] 2020-09-24 15:36:28 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:36:28 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:37:00 > Epoch:  12 Progress: 12.0% Elapsed: 0:06:22 Examples/second: 2e+02 Train Loss: 4.98687 Val Loss: 4.33541 Train Metrics: [146.477, 0.0652] Val Metrics: [76.3561, 0.0002] Learning rate: 0.0001097 
+[INFO] 2020-09-24 15:37:00 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:37:00 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:37:31 > Epoch:  13 Progress: 13.0% Elapsed: 0:06:54 Examples/second: 2e+02 Train Loss: 4.4172 Val Loss: 2.96351 Train Metrics: [82.8641, 0.0767] Val Metrics: [19.3659, 0.0005] Learning rate: 0.0001188 
+[INFO] 2020-09-24 15:37:31 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:37:31 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:38:03 > Epoch:  14 Progress: 14.0% Elapsed: 0:07:26 Examples/second: 2e+02 Train Loss: 4.00743 Val Loss: 3.39903 Train Metrics: [55.0054, 0.0785] Val Metrics: [29.935, 0.0138] Learning rate: 0.0001279 
+[INFO] 2020-09-24 15:38:03 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:38:03 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:38:35 > Epoch:  15 Progress: 15.0% Elapsed: 0:07:58 Examples/second: 2e+02 Train Loss: 3.70061 Val Loss: 3.21424 Train Metrics: [40.4721, 0.0827] Val Metrics: [24.8845, 0.0006] Learning rate: 0.000137 
+[INFO] 2020-09-24 15:38:35 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:38:35 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:39:07 > Epoch:  16 Progress: 16.0% Elapsed: 0:08:29 Examples/second: 2e+02 Train Loss: 3.47486 Val Loss: 3.59643 Train Metrics: [32.2934, 0.0926] Val Metrics: [36.468, 0.0026] Learning rate: 0.000146 
+[INFO] 2020-09-24 15:39:07 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:39:07 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:39:38 > Epoch:  17 Progress: 17.0% Elapsed: 0:09:01 Examples/second: 2e+02 Train Loss: 3.3357 Val Loss: 4.07046 Train Metrics: [28.098, 0.0932] Val Metrics: [58.584, 0.0013] Learning rate: 0.0001551 
+[INFO] 2020-09-24 15:39:38 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:39:38 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:40:10 > Epoch:  18 Progress: 18.0% Elapsed: 0:09:33 Examples/second: 2e+02 Train Loss: 3.21787 Val Loss: 4.05001 Train Metrics: [24.9748, 0.0991] Val Metrics: [57.3979, 0.0325] Learning rate: 0.0001642 
+[INFO] 2020-09-24 15:40:10 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:40:10 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:40:42 > Epoch:  19 Progress: 19.0% Elapsed: 0:10:05 Examples/second: 2e+02 Train Loss: 3.1352 Val Loss: 4.12676 Train Metrics: [22.9931, 0.1108] Val Metrics: [61.9766, 0.0337] Learning rate: 0.0001733 
+[INFO] 2020-09-24 15:40:42 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:40:42 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:41:13 > Epoch:  20 Progress: 20.0% Elapsed: 0:10:36 Examples/second: 2e+02 Train Loss: 3.05262 Val Loss: 4.13991 Train Metrics: [21.1707, 0.112] Val Metrics: [62.7973, 0.0364] Learning rate: 0.0001824 
+[INFO] 2020-09-24 15:41:13 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:41:13 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:41:45 > Epoch:  21 Progress: 21.0% Elapsed: 0:11:08 Examples/second: 2e+02 Train Loss: 2.9972 Val Loss: 4.04661 Train Metrics: [20.0295, 0.1209] Val Metrics: [57.203, 0.0027] Learning rate: 0.0001915 
+[INFO] 2020-09-24 15:41:45 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:41:45 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:42:17 > Epoch:  22 Progress: 22.0% Elapsed: 0:11:40 Examples/second: 2e+02 Train Loss: 2.94523 Val Loss: 4.10984 Train Metrics: [19.0151, 0.125] Val Metrics: [60.9373, 0.0389] Learning rate: 0.0002005 
+[INFO] 2020-09-24 15:42:17 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:42:17 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:42:49 > Epoch:  23 Progress: 23.0% Elapsed: 0:12:12 Examples/second: 2e+02 Train Loss: 2.87042 Val Loss: 3.98719 Train Metrics: [17.6444, 0.1411] Val Metrics: [53.9032, 0.0398] Learning rate: 0.0002096 
+[INFO] 2020-09-24 15:42:49 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:42:49 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:43:21 > Epoch:  24 Progress: 24.0% Elapsed: 0:12:43 Examples/second: 2e+02 Train Loss: 2.7954 Val Loss: 4.13782 Train Metrics: [16.3691, 0.1552] Val Metrics: [62.6661, 0.0391] Learning rate: 0.0002187 
+[INFO] 2020-09-24 15:43:21 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:43:21 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:43:52 > Epoch:  25 Progress: 25.0% Elapsed: 0:13:15 Examples/second: 2e+02 Train Loss: 2.71766 Val Loss: 4.00772 Train Metrics: [15.1449, 0.1736] Val Metrics: [55.0215, 0.0388] Learning rate: 0.0002278 
+[INFO] 2020-09-24 15:43:52 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:43:52 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:44:24 > Epoch:  26 Progress: 26.0% Elapsed: 0:13:47 Examples/second: 2e+02 Train Loss: 2.61694 Val Loss: 3.74585 Train Metrics: [13.6937, 0.1917] Val Metrics: [42.3448, 0.0397] Learning rate: 0.0002369 
+[INFO] 2020-09-24 15:44:24 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:44:24 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:44:56 > Epoch:  27 Progress: 27.0% Elapsed: 0:14:19 Examples/second: 2e+02 Train Loss: 2.52032 Val Loss: 4.25454 Train Metrics: [12.4325, 0.217] Val Metrics: [70.4244, 0.0397] Learning rate: 0.000246 
+[INFO] 2020-09-24 15:44:56 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:44:56 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:45:27 > Epoch:  28 Progress: 28.0% Elapsed: 0:14:50 Examples/second: 2e+02 Train Loss: 2.42487 Val Loss: 4.00833 Train Metrics: [11.3008, 0.2442] Val Metrics: [55.0548, 0.0396] Learning rate: 0.0002551 
+[INFO] 2020-09-24 15:45:27 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:45:27 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:45:59 > Epoch:  29 Progress: 29.0% Elapsed: 0:15:22 Examples/second: 2e+02 Train Loss: 2.32316 Val Loss: 3.71134 Train Metrics: [10.2079, 0.2691] Val Metrics: [40.9087, 0.0399] Learning rate: 0.0002641 
+[INFO] 2020-09-24 15:45:59 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:45:59 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:46:31 > Epoch:  30 Progress: 30.0% Elapsed: 0:15:54 Examples/second: 2e+02 Train Loss: 2.21113 Val Loss: 4.22501 Train Metrics: [9.126, 0.2991] Val Metrics: [68.3752, 0.0313] Learning rate: 0.0002732 
+[INFO] 2020-09-24 15:46:31 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:46:31 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:47:03 > Epoch:  31 Progress: 31.0% Elapsed: 0:16:25 Examples/second: 2e+02 Train Loss: 2.08218 Val Loss: 4.39262 Train Metrics: [8.022, 0.3425] Val Metrics: [80.8521, 0.0388] Learning rate: 0.0002823 
+[INFO] 2020-09-24 15:47:03 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:47:03 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:47:34 > Epoch:  32 Progress: 32.0% Elapsed: 0:16:57 Examples/second: 2e+02 Train Loss: 1.96943 Val Loss: 3.63915 Train Metrics: [7.1666, 0.3763] Val Metrics: [38.0595, 0.0349] Learning rate: 0.0002914 
+[INFO] 2020-09-24 15:47:34 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:47:34 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:48:06 > Epoch:  33 Progress: 33.0% Elapsed: 0:17:29 Examples/second: 2e+02 Train Loss: 1.87982 Val Loss: 4.59771 Train Metrics: [6.5523, 0.3936] Val Metrics: [99.2567, 0.0295] Learning rate: 0.0003005 
+[INFO] 2020-09-24 15:48:06 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:48:06 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:48:38 > Epoch:  34 Progress: 34.0% Elapsed: 0:18:00 Examples/second: 2e+02 Train Loss: 1.77112 Val Loss: 4.09071 Train Metrics: [5.8774, 0.4306] Val Metrics: [59.7826, 0.0363] Learning rate: 0.0003096 
+[INFO] 2020-09-24 15:48:38 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:48:38 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:49:09 > Epoch:  35 Progress: 35.0% Elapsed: 0:18:32 Examples/second: 2e+02 Train Loss: 1.68292 Val Loss: 4.26612 Train Metrics: [5.3812, 0.4598] Val Metrics: [71.2447, 0.036] Learning rate: 0.0003186 
+[INFO] 2020-09-24 15:49:09 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:49:09 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:49:41 > Epoch:  36 Progress: 36.0% Elapsed: 0:19:04 Examples/second: 2e+02 Train Loss: 1.60416 Val Loss: 3.67119 Train Metrics: [4.9737, 0.483] Val Metrics: [39.2986, 0.0138] Learning rate: 0.0003277 
+[INFO] 2020-09-24 15:49:41 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:49:41 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:50:13 > Epoch:  37 Progress: 37.0% Elapsed: 0:19:36 Examples/second: 2e+02 Train Loss: 1.51447 Val Loss: 3.74971 Train Metrics: [4.547, 0.5194] Val Metrics: [42.5089, 0.0118] Learning rate: 0.0003368 
+[INFO] 2020-09-24 15:50:13 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:50:13 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:50:45 > Epoch:  38 Progress: 38.0% Elapsed: 0:20:07 Examples/second: 2e+02 Train Loss: 1.44751 Val Loss: 3.6728 Train Metrics: [4.2525, 0.5408] Val Metrics: [39.3619, 0.0138] Learning rate: 0.0003459 
+[INFO] 2020-09-24 15:50:45 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:50:45 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:51:16 > Epoch:  39 Progress: 39.0% Elapsed: 0:20:39 Examples/second: 2e+02 Train Loss: 1.36305 Val Loss: 3.81047 Train Metrics: [3.9081, 0.5751] Val Metrics: [45.1716, 0.0] Learning rate: 0.000355 
+[INFO] 2020-09-24 15:51:16 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:51:16 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:51:48 > Epoch:  40 Progress: 40.0% Elapsed: 0:21:11 Examples/second: 2e+02 Train Loss: 1.31444 Val Loss: 4.01607 Train Metrics: [3.7227, 0.582] Val Metrics: [55.4826, 0.0001] Learning rate: 0.0003641 
+[INFO] 2020-09-24 15:51:48 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:51:48 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:52:20 > Epoch:  41 Progress: 41.0% Elapsed: 0:21:42 Examples/second: 2e+02 Train Loss: 1.25115 Val Loss: 3.91504 Train Metrics: [3.4944, 0.6046] Val Metrics: [50.151, 0.0012] Learning rate: 0.0003731 
+[INFO] 2020-09-24 15:52:20 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:52:20 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:52:51 > Epoch:  42 Progress: 42.0% Elapsed: 0:22:14 Examples/second: 2e+02 Train Loss: 1.19845 Val Loss: 3.73281 Train Metrics: [3.315, 0.6303] Val Metrics: [41.7965, 0.005] Learning rate: 0.0003822 
+[INFO] 2020-09-24 15:52:51 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:52:51 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:53:23 > Epoch:  43 Progress: 43.0% Elapsed: 0:22:46 Examples/second: 2e+02 Train Loss: 1.1674 Val Loss: 3.71396 Train Metrics: [3.2136, 0.6323] Val Metrics: [41.0159, 0.0107] Learning rate: 0.0003913 
+[INFO] 2020-09-24 15:53:23 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:53:23 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:53:55 > Epoch:  44 Progress: 44.0% Elapsed: 0:23:18 Examples/second: 2e+02 Train Loss: 1.09718 Val Loss: 3.88429 Train Metrics: [2.9957, 0.6495] Val Metrics: [48.6323, 0.0046] Learning rate: 0.0004004 
+[INFO] 2020-09-24 15:53:55 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:53:55 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:54:26 > Epoch:  45 Progress: 45.0% Elapsed: 0:23:49 Examples/second: 2e+02 Train Loss: 1.0564 Val Loss: 4.39667 Train Metrics: [2.876, 0.6707] Val Metrics: [81.1799, 0.0003] Learning rate: 0.0004095 
+[INFO] 2020-09-24 15:54:26 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:54:26 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:54:58 > Epoch:  46 Progress: 46.0% Elapsed: 0:24:21 Examples/second: 2e+02 Train Loss: 1.02034 Val Loss: 4.38727 Train Metrics: [2.7741, 0.6711] Val Metrics: [80.4204, 0.0006] Learning rate: 0.0004186 
+[INFO] 2020-09-24 15:54:58 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:54:58 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:55:30 > Epoch:  47 Progress: 47.0% Elapsed: 0:24:52 Examples/second: 2e+02 Train Loss: 0.975293 Val Loss: 4.59128 Train Metrics: [2.6519, 0.6897] Val Metrics: [98.621, 0.0022] Learning rate: 0.0004276 
+[INFO] 2020-09-24 15:55:30 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:55:30 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:56:01 > Epoch:  48 Progress: 48.0% Elapsed: 0:25:24 Examples/second: 2e+02 Train Loss: 0.943377 Val Loss: 5.43224 Train Metrics: [2.5686, 0.7017] Val Metrics: [228.6603, 0.0001] Learning rate: 0.0004367 
+[INFO] 2020-09-24 15:56:01 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:56:01 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:56:33 > Epoch:  49 Progress: 49.0% Elapsed: 0:25:56 Examples/second: 2e+02 Train Loss: 0.913613 Val Loss: 5.03893 Train Metrics: [2.4933, 0.7096] Val Metrics: [154.3047, 0.0059] Learning rate: 0.0004458 
+[INFO] 2020-09-24 15:56:33 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:56:33 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:57:05 > Epoch:  50 Progress: 50.0% Elapsed: 0:26:27 Examples/second: 2e+02 Train Loss: 0.882576 Val Loss: 4.776 Train Metrics: [2.4171, 0.7232] Val Metrics: [118.6287, 0.0002] Learning rate: 0.0004549 
+[INFO] 2020-09-24 15:57:05 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:57:05 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:57:36 > Epoch:  51 Progress: 51.0% Elapsed: 0:26:59 Examples/second: 2e+02 Train Loss: 0.846672 Val Loss: 4.37124 Train Metrics: [2.3319, 0.7279] Val Metrics: [79.1416, 0.0217] Learning rate: 0.000464 
+[INFO] 2020-09-24 15:57:36 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:57:36 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:58:08 > Epoch:  52 Progress: 52.0% Elapsed: 0:27:31 Examples/second: 2e+02 Train Loss: 0.840749 Val Loss: 4.39624 Train Metrics: [2.3181, 0.7357] Val Metrics: [81.1448, 0.0002] Learning rate: 0.0004731 
+[INFO] 2020-09-24 15:58:08 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:58:08 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:58:40 > Epoch:  53 Progress: 53.0% Elapsed: 0:28:02 Examples/second: 2e+02 Train Loss: 0.814069 Val Loss: 4.81424 Train Metrics: [2.2571, 0.7434] Val Metrics: [123.2529, 0.0001] Learning rate: 0.0004822 
+[INFO] 2020-09-24 15:58:40 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:58:40 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:59:11 > Epoch:  54 Progress: 54.0% Elapsed: 0:28:34 Examples/second: 2e+02 Train Loss: 0.775034 Val Loss: 4.60111 Train Metrics: [2.1707, 0.7577] Val Metrics: [99.5946, 0.0005] Learning rate: 0.0004912 
+[INFO] 2020-09-24 15:59:11 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:59:11 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 15:59:43 > Epoch:  55 Progress: 55.0% Elapsed: 0:29:06 Examples/second: 2e+02 Train Loss: 0.754198 Val Loss: 4.60873 Train Metrics: [2.1259, 0.7648] Val Metrics: [100.3567, 0.0042] Learning rate: 0.0005003 
+[INFO] 2020-09-24 15:59:43 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 15:59:43 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:00:15 > Epoch:  56 Progress: 56.0% Elapsed: 0:29:37 Examples/second: 2e+02 Train Loss: 0.729984 Val Loss: 4.2612 Train Metrics: [2.075, 0.7734] Val Metrics: [70.8949, 0.02] Learning rate: 0.0005094 
+[INFO] 2020-09-24 16:00:15 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:00:15 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:00:46 > Epoch:  57 Progress: 57.0% Elapsed: 0:30:09 Examples/second: 2e+02 Train Loss: 0.7238 Val Loss: 4.59757 Train Metrics: [2.0623, 0.7748] Val Metrics: [99.2428, 0.0009] Learning rate: 0.0005185 
+[INFO] 2020-09-24 16:00:46 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:00:46 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:01:18 > Epoch:  58 Progress: 58.0% Elapsed: 0:30:41 Examples/second: 2e+02 Train Loss: 0.693796 Val Loss: 4.1358 Train Metrics: [2.0013, 0.7886] Val Metrics: [62.5394, 0.0018] Learning rate: 0.0005276 
+[INFO] 2020-09-24 16:01:18 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:01:18 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:01:50 > Epoch:  59 Progress: 59.0% Elapsed: 0:31:12 Examples/second: 2e+02 Train Loss: 0.673375 Val Loss: 3.83001 Train Metrics: [1.9608, 0.7915] Val Metrics: [46.0631, 0.0013] Learning rate: 0.0005367 
+[INFO] 2020-09-24 16:01:50 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:01:50 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:02:21 > Epoch:  60 Progress: 60.0% Elapsed: 0:31:44 Examples/second: 2e+02 Train Loss: 0.659554 Val Loss: 4.38737 Train Metrics: [1.9339, 0.7953] Val Metrics: [80.4285, 0.0041] Learning rate: 0.0005457 
+[INFO] 2020-09-24 16:02:21 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:02:21 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:02:53 > Epoch:  61 Progress: 61.0% Elapsed: 0:32:16 Examples/second: 2e+02 Train Loss: 0.64683 Val Loss: 3.81157 Train Metrics: [1.9095, 0.8046] Val Metrics: [45.2212, 0.0047] Learning rate: 0.0005548 
+[INFO] 2020-09-24 16:02:53 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:02:53 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:03:25 > Epoch:  62 Progress: 62.0% Elapsed: 0:32:47 Examples/second: 2e+02 Train Loss: 0.635115 Val Loss: 3.34006 Train Metrics: [1.8872, 0.8041] Val Metrics: [28.2209, 0.0077] Learning rate: 0.0005639 
+[INFO] 2020-09-24 16:03:25 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:03:25 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:03:56 > Epoch:  63 Progress: 63.0% Elapsed: 0:33:19 Examples/second: 2e+02 Train Loss: 0.617773 Val Loss: 4.18455 Train Metrics: [1.8548, 0.8108] Val Metrics: [65.664, 0.0008] Learning rate: 0.000573 
+[INFO] 2020-09-24 16:03:56 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:03:56 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:04:28 > Epoch:  64 Progress: 64.0% Elapsed: 0:33:51 Examples/second: 2e+02 Train Loss: 0.611578 Val Loss: 3.35846 Train Metrics: [1.8433, 0.8139] Val Metrics: [28.7449, 0.0118] Learning rate: 0.0005821 
+[INFO] 2020-09-24 16:04:28 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:04:28 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:04:59 > Epoch:  65 Progress: 65.0% Elapsed: 0:34:22 Examples/second: 2e+02 Train Loss: 0.583729 Val Loss: 3.20175 Train Metrics: [1.7927, 0.8273] Val Metrics: [24.5756, 0.0272] Learning rate: 0.0005912 
+[INFO] 2020-09-24 16:05:00 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:05:00 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:05:31 > Epoch:  66 Progress: 66.0% Elapsed: 0:34:54 Examples/second: 2e+02 Train Loss: 0.581479 Val Loss: 3.16932 Train Metrics: [1.7887, 0.8213] Val Metrics: [23.7912, 0.0107] Learning rate: 0.0006002 
+[INFO] 2020-09-24 16:05:31 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:05:31 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:06:03 > Epoch:  67 Progress: 67.0% Elapsed: 0:35:26 Examples/second: 2e+02 Train Loss: 0.55926 Val Loss: 3.82028 Train Metrics: [1.7494, 0.8281] Val Metrics: [45.6169, 0.0022] Learning rate: 0.0006093 
+[INFO] 2020-09-24 16:06:03 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:06:03 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:06:35 > Epoch:  68 Progress: 68.0% Elapsed: 0:35:57 Examples/second: 2e+02 Train Loss: 0.553989 Val Loss: 3.07108 Train Metrics: [1.7402, 0.8385] Val Metrics: [21.5653, 0.0343] Learning rate: 0.0006184 
+[INFO] 2020-09-24 16:06:35 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:06:35 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:07:06 > Epoch:  69 Progress: 69.0% Elapsed: 0:36:29 Examples/second: 2e+02 Train Loss: 0.54007 Val Loss: 3.35172 Train Metrics: [1.7161, 0.8374] Val Metrics: [28.5519, 0.0202] Learning rate: 0.0006275 
+[INFO] 2020-09-24 16:07:06 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:07:06 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:07:38 > Epoch:  70 Progress: 70.0% Elapsed: 0:37:01 Examples/second: 2e+02 Train Loss: 0.529207 Val Loss: 3.28544 Train Metrics: [1.6976, 0.8419] Val Metrics: [26.7208, 0.004] Learning rate: 0.0006366 
+[INFO] 2020-09-24 16:07:38 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:07:38 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:08:10 > Epoch:  71 Progress: 71.0% Elapsed: 0:37:32 Examples/second: 2e+02 Train Loss: 0.51734 Val Loss: 2.74055 Train Metrics: [1.6776, 0.8435] Val Metrics: [15.4955, 0.0095] Learning rate: 0.0006457 
+[INFO] 2020-09-24 16:08:10 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:08:10 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:08:41 > Epoch:  72 Progress: 72.0% Elapsed: 0:38:04 Examples/second: 2e+02 Train Loss: 0.51091 Val Loss: 3.59171 Train Metrics: [1.6668, 0.8501] Val Metrics: [36.2961, 0.0031] Learning rate: 0.0006547 
+[INFO] 2020-09-24 16:08:41 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:08:41 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:09:13 > Epoch:  73 Progress: 73.0% Elapsed: 0:38:36 Examples/second: 2e+02 Train Loss: 0.508134 Val Loss: 2.64774 Train Metrics: [1.6622, 0.8482] Val Metrics: [14.1221, 0.0422] Learning rate: 0.0006638 
+[INFO] 2020-09-24 16:09:13 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:09:13 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:09:45 > Epoch:  74 Progress: 74.0% Elapsed: 0:39:07 Examples/second: 2e+02 Train Loss: 0.503009 Val Loss: 1.88597 Train Metrics: [1.6537, 0.8501] Val Metrics: [6.5928, 0.137] Learning rate: 0.0006729 
+[INFO] 2020-09-24 16:09:45 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:09:45 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:10:16 > Epoch:  75 Progress: 75.0% Elapsed: 0:39:39 Examples/second: 2e+02 Train Loss: 0.485086 Val Loss: 3.09594 Train Metrics: [1.6243, 0.8565] Val Metrics: [22.1081, 0.0077] Learning rate: 0.000682 
+[INFO] 2020-09-24 16:10:16 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:10:16 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:10:48 > Epoch:  76 Progress: 76.0% Elapsed: 0:40:11 Examples/second: 2e+02 Train Loss: 0.468097 Val Loss: 2.319 Train Metrics: [1.597, 0.8637] Val Metrics: [10.1655, 0.0212] Learning rate: 0.0006911 
+[INFO] 2020-09-24 16:10:48 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:10:48 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:11:20 > Epoch:  77 Progress: 77.0% Elapsed: 0:40:42 Examples/second: 2e+02 Train Loss: 0.461895 Val Loss: 2.30687 Train Metrics: [1.5871, 0.866] Val Metrics: [10.0429, 0.021] Learning rate: 0.0007002 
+[INFO] 2020-09-24 16:11:20 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:11:20 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:11:51 > Epoch:  78 Progress: 78.0% Elapsed: 0:41:14 Examples/second: 2e+02 Train Loss: 0.450748 Val Loss: 3.49973 Train Metrics: [1.5695, 0.8719] Val Metrics: [33.1064, 0.0116] Learning rate: 0.0007093 
+[INFO] 2020-09-24 16:11:51 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:11:51 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:12:23 > Epoch:  79 Progress: 79.0% Elapsed: 0:41:46 Examples/second: 2e+02 Train Loss: 0.455214 Val Loss: 2.1248 Train Metrics: [1.5765, 0.8704] Val Metrics: [8.3712, 0.0563] Learning rate: 0.0007183 
+[INFO] 2020-09-24 16:12:23 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:12:23 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:12:55 > Epoch:  80 Progress: 80.0% Elapsed: 0:42:17 Examples/second: 2e+02 Train Loss: 0.454766 Val Loss: 3.68273 Train Metrics: [1.5758, 0.8706] Val Metrics: [39.7548, 0.0008] Learning rate: 0.0007274 
+[INFO] 2020-09-24 16:12:55 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:12:55 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:13:26 > Epoch:  81 Progress: 81.0% Elapsed: 0:42:49 Examples/second: 2e+02 Train Loss: 0.432728 Val Loss: 3.23425 Train Metrics: [1.5415, 0.8786] Val Metrics: [25.3872, 0.0093] Learning rate: 0.0007365 
+[INFO] 2020-09-24 16:13:26 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:13:26 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:13:58 > Epoch:  82 Progress: 82.0% Elapsed: 0:43:21 Examples/second: 2e+02 Train Loss: 0.42292 Val Loss: 2.98582 Train Metrics: [1.5264, 0.8772] Val Metrics: [19.8028, 0.0029] Learning rate: 0.0007456 
+[INFO] 2020-09-24 16:13:58 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:13:58 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:14:30 > Epoch:  83 Progress: 83.0% Elapsed: 0:43:52 Examples/second: 2e+02 Train Loss: 0.423768 Val Loss: 2.70363 Train Metrics: [1.5277, 0.8765] Val Metrics: [14.9338, 0.0521] Learning rate: 0.0007547 
+[INFO] 2020-09-24 16:14:30 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:14:30 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:15:01 > Epoch:  84 Progress: 84.0% Elapsed: 0:44:24 Examples/second: 2e+02 Train Loss: 0.420914 Val Loss: 1.81585 Train Metrics: [1.5234, 0.8752] Val Metrics: [6.1463, 0.2816] Learning rate: 0.0007638 
+[INFO] 2020-09-24 16:15:01 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:15:01 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:15:33 > Epoch:  85 Progress: 85.0% Elapsed: 0:44:56 Examples/second: 2e+02 Train Loss: 0.40717 Val Loss: 2.66568 Train Metrics: [1.5026, 0.8859] Val Metrics: [14.3777, 0.013] Learning rate: 0.0007728 
+[INFO] 2020-09-24 16:15:33 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:15:33 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:16:05 > Epoch:  86 Progress: 86.0% Elapsed: 0:45:27 Examples/second: 2e+02 Train Loss: 0.411829 Val Loss: 2.31649 Train Metrics: [1.5096, 0.8831] Val Metrics: [10.14, 0.1036] Learning rate: 0.0007819 
+[INFO] 2020-09-24 16:16:05 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:16:05 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:16:36 > Epoch:  87 Progress: 87.0% Elapsed: 0:45:59 Examples/second: 2e+02 Train Loss: 0.391592 Val Loss: 2.43518 Train Metrics: [1.4793, 0.8915] Val Metrics: [11.4179, 0.0635] Learning rate: 0.000791 
+[INFO] 2020-09-24 16:16:36 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:16:36 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:17:08 > Epoch:  88 Progress: 88.0% Elapsed: 0:46:31 Examples/second: 2e+02 Train Loss: 0.3908 Val Loss: 2.60614 Train Metrics: [1.4782, 0.893] Val Metrics: [13.5466, 0.025] Learning rate: 0.0008001 
+[INFO] 2020-09-24 16:17:08 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:17:08 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:17:40 > Epoch:  89 Progress: 89.0% Elapsed: 0:47:02 Examples/second: 2e+02 Train Loss: 0.377805 Val Loss: 2.05399 Train Metrics: [1.4591, 0.8965] Val Metrics: [7.799, 0.1718] Learning rate: 0.0008092 
+[INFO] 2020-09-24 16:17:40 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:17:40 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:18:11 > Epoch:  90 Progress: 90.0% Elapsed: 0:47:34 Examples/second: 2e+02 Train Loss: 0.364113 Val Loss: 2.66596 Train Metrics: [1.4392, 0.9027] Val Metrics: [14.3817, 0.0185] Learning rate: 0.0008183 
+[INFO] 2020-09-24 16:18:11 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:18:11 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:18:43 > Epoch:  91 Progress: 91.0% Elapsed: 0:48:06 Examples/second: 2e+02 Train Loss: 0.363942 Val Loss: 1.88586 Train Metrics: [1.439, 0.8998] Val Metrics: [6.592, 0.1979] Learning rate: 0.0008273 
+[INFO] 2020-09-24 16:18:43 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:18:43 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:19:15 > Epoch:  92 Progress: 92.0% Elapsed: 0:48:37 Examples/second: 2e+02 Train Loss: 0.361916 Val Loss: 2.23777 Train Metrics: [1.4361, 0.9038] Val Metrics: [9.3724, 0.0421] Learning rate: 0.0008364 
+[INFO] 2020-09-24 16:19:15 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:19:15 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:19:46 > Epoch:  93 Progress: 93.0% Elapsed: 0:49:09 Examples/second: 2e+02 Train Loss: 0.371648 Val Loss: 2.90464 Train Metrics: [1.4501, 0.9018] Val Metrics: [18.2586, 0.0139] Learning rate: 0.0008455 
+[INFO] 2020-09-24 16:19:46 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:19:46 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:20:18 > Epoch:  94 Progress: 94.0% Elapsed: 0:49:41 Examples/second: 2e+02 Train Loss: 0.355191 Val Loss: 2.48977 Train Metrics: [1.4265, 0.9062] Val Metrics: [12.0585, 0.0265] Learning rate: 0.0008546 
+[INFO] 2020-09-24 16:20:18 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:20:18 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:20:49 > Epoch:  95 Progress: 95.0% Elapsed: 0:50:12 Examples/second: 2e+02 Train Loss: 0.352493 Val Loss: 2.46543 Train Metrics: [1.4226, 0.9057] Val Metrics: [11.7685, 0.0399] Learning rate: 0.0008637 
+[INFO] 2020-09-24 16:20:49 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:20:49 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:21:21 > Epoch:  96 Progress: 96.0% Elapsed: 0:50:44 Examples/second: 2e+02 Train Loss: 0.339361 Val Loss: 2.28652 Train Metrics: [1.4041, 0.9098] Val Metrics: [9.8406, 0.0982] Learning rate: 0.0008728 
+[INFO] 2020-09-24 16:21:21 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:21:21 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:21:54 > Epoch:  97 Progress: 97.0% Elapsed: 0:51:16 Examples/second: 2e+02 Train Loss: 0.332955 Val Loss: 3.56283 Train Metrics: [1.3951, 0.9135] Val Metrics: [35.2628, 0.0028] Learning rate: 0.0008818 
+[INFO] 2020-09-24 16:21:54 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:21:54 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:22:25 > Epoch:  98 Progress: 98.0% Elapsed: 0:51:48 Examples/second: 2e+02 Train Loss: 0.318969 Val Loss: 2.19108 Train Metrics: [1.3757, 0.9183] Val Metrics: [8.9449, 0.1773] Learning rate: 0.0008909 
+[INFO] 2020-09-24 16:22:25 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:22:25 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:22:57 > Epoch:  99 Progress: 99.0% Elapsed: 0:52:20 Examples/second: 2e+02 Train Loss: 0.326644 Val Loss: 2.62933 Train Metrics: [1.3863, 0.916] Val Metrics: [13.8645, 0.0186] Learning rate: 0.0009 
+[INFO] 2020-09-24 16:22:57 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:22:57 > Current best model is checkpoints/example_model.pth
+[INFO] 2020-09-24 16:23:29 > Epoch: 100 Progress: 100.0% Elapsed: 0:52:51 Examples/second: 2e+02 Train Loss: 0.319985 Val Loss: 2.10448 Train Metrics: [1.3771, 0.9171] Val Metrics: [8.2029, 0.1184] Learning rate: 0.0009091 
+[INFO] 2020-09-24 16:23:29 > Saved model to checkpoints/example_model.pth
+[INFO] 2020-09-24 16:23:29 > Current best model is checkpoints/example_model.pth

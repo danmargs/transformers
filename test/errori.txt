@@ -1,0 +1,34 @@
+p:Locating 1 a:Sought_entity 2 4 a:Ground 5 8
+p:Locating 1 a:Sought_entity 2 4 a:Ground 5 8
+p:Change_direction 1 a:Direction 2 4
+p:Change_direction 1 a:Direction 2 4
+p:Locating 1 a:Ground 2 4 a:Sought_entity 5 7
+p:Locating 1 a:Ground 2 4 a:Sought_entity 5 7
+p:Being_located 1 a:Theme 3 5 a:Location 6 9 a:Theme 11 12
+p:Being_located 1 a:Theme 3 5 a:Location 6 9 a:Theme 11 12
+p:Taking 1 a:Theme 2 3 # p:Bringing 5 a:Theme 6 6 a:Goal 7 10
+p:Taking 1 a:Theme 2 3 # p:Bringing 5 a:Theme 6 6 a:Goal 7 10
+p:Taking 2 a:Theme 3 4 a:Source 5 8 # p:Placing 10 a:Theme 11 11 a:Goal 12 14
+p:Taking 2 a:Theme 3 4 a:Source 5 8 # p:Placing 10 a:Theme 11 11 a:Goal 12 14
+p:Motion 1 a:Goal 2 2 a:Path 3 4
+p:Motion 1 a:Goal 2 2 a:Path 3 4
+p:Taking 1 a:Theme 2 8 # p:Being_located 5 a:Theme 4 4 a:Location 6 8
+p:Taking 1 a:Theme 2 8 # p:Being_located 5 a:Theme 4 4 a:Location 6 8
+p:Cotheme 3 a:Cotheme 4 5
+p:Cotheme 3 a:Cotheme 4 5
+p:Change_operational_state 1 a:Operational_state 2 2 a:Device 3 4 # p:Motion 6 a:Goal 7 9
+p:Change_operational_state 1 a:Operational_state 2 2 a:Device 3 4 # p:Motion 6 a:Goal 7 9
+p:Motion 1 a:Goal 2 4
+p:Motion 1 a:Goal 2 4
+p:Being_located 1 a:Theme 3 4 a:Location 5 7
+p:Being_located 1 a:Theme 3 4 a:Location 5 7
+p:Inspecting 2 a:Ground 4 5 a:Desired_state 6 7
+p:Inspecting 2 a:Ground 4 5 a:Desired_state 6 7
+p:Change_operational_state 7 a:Operational_state 8 8 a:Device 9 10
+p:Change_operational_state 7 a:Operational_state 8 8 a:Device 9 10
+p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+p:Arriving 1 a:Goal 2 3
+p:Arriving 1 a:Goal 2 3
+p:Bringing 2 a:Beneficiary 3 3 a:Theme 4 15 # p:Being_located 7 a:Theme 6 6 a:Location 8 15
+p:Bringing 2 a:Beneficiary 3 3 a:Theme 4 15 # p:Being_located 7 a:Theme 6 6 a:Location 8 15
