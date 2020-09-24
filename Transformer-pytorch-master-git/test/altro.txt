@@ -1,0 +1,209 @@
+################################################################################################
+
+Risultati con 6 Layers, 4 Heads, 0.1 Dropout e "Noam" Optimizer
+
+11 p:Placing 1 a:Theme 2 4 a:Goal 5 7
+9 p:Taking 1 a:Theme 2 10
+1 p:Motion 4 a:Theme 3 3 a:Goal 5 7
+5 p:Locating 2 a:Sought_entity 3 4
+non trovato per [CMD] go straight to the living room [END]
+non trovato per [CMD] please follow me to the table [END]
+4 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+3 p:Motion 1 a:Goal 2 4 # p:Change_operational_state 6 a:Device 7 7 a:Operational_state 8 8
+non trovato per [CMD] follow me carefully [END]
+10 p:Releasing 1 a:Theme 2 3 a:Goal 4 6
+2 p:Cotheme 1 a:Cotheme 2 5
+7 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] go to the telephone and check for any messages [END]
+5 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+5 p:Bringing 1 a:Theme 2 3 a:Goal 4 9
+non trovato per [CMD] please robot put the pan on the stove and control it [END]
+non trovato per [CMD] bring slowly the box near the counter of the kitchen [END]
+non trovato per [CMD] please put the book on the table in the dining room [END]
+7 p:Motion 1 a:Goal 2 4
+5 p:Motion 1 a:Goal 2 5
+6 p:Taking 1 a:Theme 2 9
+non trovato per [CMD] take the newspaper from the stand and put it on the coffee table [END]
+11 p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+6 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+non trovato per [CMD] take the remote controller from the table near the tv and put it in the bookshelf [END]
+
+16 su 25 esatte
+9 su 25 errate
+
+Di cui 4 su 9 errorate per poco
+
+################################################################################################
+
+Risultati con 6 Layers, 4 Heads, 0.2 Dropout e "Noam" Optimizer
+
+4 p:Placing 1 a:Theme 2 4 a:Goal 5 7
+5 p:Taking 1 a:Theme 2 10
+1 p:Motion 4 a:Theme 3 3 a:Goal 5 7
+7 p:Locating 2 a:Sought_entity 3 4
+2 p:Motion 1 a:Goal 2 6
+8 p:Cotheme 2 a:Cotheme 3 3 a:Goal 4 6
+10 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] go to the radio and turn it off [END]
+7 p:Cotheme 1 a:Cotheme 2 2 a:Manner 3 3
+10 p:Releasing 1 a:Theme 2 3 a:Goal 4 6
+6 p:Cotheme 1 a:Cotheme 2 5
+9 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] go to the telephone and check for any messages [END]
+4 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+7 p:Bringing 1 a:Theme 2 3 a:Goal 4 9
+non trovato per [CMD] please robot put the pan on the stove and control it [END]
+non trovato per [CMD] bring slowly the box near the counter of the kitchen [END]
+non trovato per [CMD] please put the book on the table in the dining room [END]
+6 p:Motion 1 a:Goal 2 4
+6 p:Motion 1 a:Goal 2 5
+7 p:Taking 1 a:Theme 2 9
+non trovato per [CMD] take the newspaper from the stand and put it on the coffee table [END]
+7 p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+4 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+non trovato per [CMD] take the remote controller from the table near the tv and put it in the bookshelf [END] 
+
+18 su 25 esatte
+7 su 25 errate
+
+Di cui 3 su 7 errorate per poco
+
+################################################################################################
+
+add motion-inspecting
+add placing-inspecting
+add bringing manner
+add taking source
+
+
+
+##########################
+
+con 12 Risultati
+
+1 p:Placing 1 a:Theme 2 4 a:Goal 5 7
+2 p:Taking 1 a:Theme 2 10
+4 p:Motion 4 a:Theme 3 3 a:Goal 5 7
+4 p:Locating 2 a:Sought_entity 3 4
+5 p:Motion 1 a:Goal 2 6
+6 p:Cotheme 2 a:Cotheme 3 3 a:Goal 4 6
+8 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+4 p:Motion 1 a:Goal 2 4 # p:Change_operational_state 6 a:Device 7 7 a:Operational_state 8 8
+8 p:Cotheme 1 a:Cotheme 2 2 a:Manner 3 3
+9 p:Releasing 1 a:Theme 2 3 a:Goal 4 6
+3 p:Cotheme 1 a:Cotheme 2 5
+4 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+4 p:Motion 1 a:Goal 2 4 # p:Inspecting 6 a:Unwanted_entity 7 9
+4 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+1 p:Bringing 1 a:Theme 2 3 a:Goal 4 9
+1 p:Placing 3 a:Theme 4 5 a:Goal 6 8 # p:Inspecting 10 a:Ground 11 11
+11 p:Bringing 1 a:Manner 2 2 a:Theme 3 4 a:Goal 5 10
+1 p:Placing 2 a:Theme 3 4 a:Goal 5 11
+2 p:Motion 1 a:Goal 2 4
+2 p:Motion 1 a:Goal 2 5
+4 p:Taking 1 a:Theme 2 9
+non trovato per [CMD] take the newspaper from the stand and put it on the coffee table [END]
+7 p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+3 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+1 p:Taking 1 a:Theme 2 4 a:Source 5 10 # p:Placing 12 a:Theme 13 13 a:Goal 14 16
+
+
+#################################
+
+con 1 risultato pre
+
+non trovato per [CMD] put the baking tray in the oven [END]
+0 p:Taking 1 a:Theme 2 10
+non trovato per [CMD] robot could you move near the table [END]
+0 p:Locating 2 a:Sought_entity 3 4
+0 p:Motion 1 a:Goal 2 6
+0 p:Cotheme 2 a:Cotheme 3 3 a:Goal 4 6
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] go to the radio and turn it off [END]
+non trovato per [CMD] follow me carefully [END]
+non trovato per [CMD] leave the book in the bedroom [END]
+0 p:Cotheme 1 a:Cotheme 2 5
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Motion 1 a:Goal 2 4 # p:Inspecting 6 a:Unwanted_entity 7 9
+0 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] carry the pillow near the window of the bedroom [END]
+non trovato per [CMD] please robot put the pan on the stove and control it [END]
+non trovato per [CMD] bring slowly the box near the counter of the kitchen [END]
+non trovato per [CMD] please put the book on the table in the dining room [END]
+0 p:Motion 1 a:Goal 2 4
+0 p:Motion 1 a:Goal 2 5
+0 p:Taking 1 a:Theme 2 9
+non trovato per [CMD] take the newspaper from the stand and put it on the coffee table [END]
+non trovato per [CMD] bring me the glasses [END]
+0 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+non trovato per [CMD] take the remote controller from the table near the tv and put it in the bookshelf [END] 
+
+12 errori 
+
+#################################
+
+con 1 risultato post 
+
+0 p:Placing 1 a:Theme 2 4 a:Goal 5 7
+0 p:Taking 1 a:Theme 2 10
+0 p:Motion 4 a:Theme 3 3 a:Goal 5 7
+0 p:Locating 2 a:Sought_entity 3 4
+0 p:Motion 1 a:Goal 2 6
+0 p:Cotheme 2 a:Cotheme 3 3 a:Goal 4 6
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Motion 1 a:Goal 2 4 # p:Change_operational_state 6 a:Device 7 7 a:Operational_state 8 8
+0 p:Cotheme 1 a:Cotheme 2 2 a:Manner 3 3
+0 p:Releasing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] follow the person behind you [END]
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Motion 1 a:Goal 2 4 # p:Inspecting 6 a:Unwanted_entity 7 9
+0 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 9
+0 p:Placing 3 a:Theme 4 5 a:Goal 6 8 # p:Inspecting 10 a:Ground 11 11
+non trovato per [CMD] bring slowly the box near the counter of the kitchen [END]
+0 p:Placing 2 a:Theme 3 4 a:Goal 5 11
+0 p:Motion 1 a:Goal 2 4
+0 p:Motion 1 a:Goal 2 5
+0 p:Taking 1 a:Theme 2 9
+non trovato per [CMD] take the newspaper from the stand and put it on the coffee table [END]
+0 p:Bringing 1 a:Beneficiary 2 2 a:Theme 3 4
+0 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+0 p:Taking 1 a:Theme 2 4 a:Source 5 10 # p:Placing 12 a:Theme 13 13 a:Goal 14 16
+
+22 su 25 esatte
+3 su 25 errate
+
+###############################
+
+dopo aggiunte di altro test
+controllo se peggiora
+
+0 p:Placing 1 a:Theme 2 4 a:Goal 5 7
+0 p:Taking 1 a:Theme 2 10
+0 p:Motion 4 a:Theme 3 3 a:Goal 5 7
+0 p:Locating 2 a:Sought_entity 3 4
+non trovato per [CMD] go straight to the living room [END]
+0 p:Cotheme 2 a:Cotheme 3 3 a:Goal 4 6
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] go to the radio and turn it off [END]
+non trovato per [CMD] follow me carefully [END]
+0 p:Releasing 1 a:Theme 2 3 a:Goal 4 6
+non trovato per [CMD] follow the person behind you [END]
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Motion 1 a:Goal 2 4 # p:Inspecting 6 a:Unwanted_entity 7 9
+0 p:Placing 1 a:Theme 2 3 a:Goal 4 6
+0 p:Bringing 1 a:Theme 2 3 a:Goal 4 9
+0 p:Placing 3 a:Theme 4 5 a:Goal 6 8 # p:Inspecting 10 a:Ground 11 11
+0 p:Bringing 1 a:Manner 2 2 a:Theme 3 4 a:Goal 5 10
+0 p:Placing 2 a:Theme 3 4 a:Goal 5 11
+0 p:Motion 1 a:Goal 2 4
+0 p:Motion 1 a:Goal 2 5
+0 p:Taking 1 a:Theme 2 9
+0 p:Taking 1 a:Theme 2 3 a:Source 4 6 # p:Placing 8 a:Theme 9 9 a:Goal 10 13
+non trovato per [CMD] bring me the glasses [END]
+0 p:Inspecting 3 a:Inspector 2 2 a:Ground 4 8
+0 p:Taking 1 a:Theme 2 4 a:Source 5 10 # p:Placing 12 a:Theme 13 13 a:Goal 14 16
+
+N.B. con 3 risultati ne sbaglia solo 1
+
+################################
